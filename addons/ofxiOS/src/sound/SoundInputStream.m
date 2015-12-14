@@ -172,7 +172,6 @@ static OSStatus soundInputStreamRenderCallback(void *inRefCon,
     //---------------------------------------------------------- enable io.
 
     UInt32 on = 1;
-    UInt32 off = 0;
     
     // enable input to AudioUnit.
 	[self checkStatus:AudioUnitSetProperty(audioUnit,
