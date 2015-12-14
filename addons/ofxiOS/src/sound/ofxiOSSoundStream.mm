@@ -95,8 +95,8 @@ bool ofxiOSSoundStream::setup(int numOfOutChannels, int numOfInChannels, int sam
                                                               withSampleRate:sampleRate
                                                               withBufferSize:bufferSize];
         ofxiOSSoundStreamDelegate * delegate = [[ofxiOSSoundStreamDelegate alloc] initWithSoundOutputApp:soundOutputPtr];
-        ((SoundInputStream *)soundOutputStream).delegate = delegate;
-        [(SoundInputStream *)soundOutputStream start];
+        ((SoundOutputStream *)soundOutputStream).delegate = delegate;
+        [(SoundOutputStream *)soundOutputStream start];
     }
     
     bool bOk = (soundInputStream != NULL) || (soundOutputStream != NULL);
