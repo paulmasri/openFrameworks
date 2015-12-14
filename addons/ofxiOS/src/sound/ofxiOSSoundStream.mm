@@ -144,8 +144,8 @@ void ofxiOSSoundStream::close(){
     }
     
     if(soundOutputStream != NULL) {
-        [((SoundOutputStream *)soundInputStream).delegate release];
-        [(SoundOutputStream *)soundInputStream setDelegate:nil];
+        [((SoundOutputStream *)soundOutputStream).delegate release];
+        [(SoundOutputStream *)soundOutputStream setDelegate:nil];
         [(SoundOutputStream *)soundOutputStream stop];
         [(SoundOutputStream *)soundOutputStream release];
         soundOutputStream = NULL;
