@@ -209,7 +209,7 @@ static OSStatus soundInputStreamRenderCallback(void *inRefCon,
 										   kAudioUnitScope_Output,
 										   kInputBus,
 										   &audioFormat,
-										   sizeof(audioFormat))];
+										   sizeof(AudioStreamBasicDescription))];
     
     //---------------------------------------------------------- callback.
     
